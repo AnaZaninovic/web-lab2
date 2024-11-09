@@ -10,13 +10,13 @@ export const CSRFSection = () => {
 	const [actionResponse, setActionResponse] = useState("");
 
 	const handleGetToken = async () => {
-		const response = await fetch("/api/getToken");
+		const response = await fetch(PAGE_1 + "/api/getToken");
 		const data = await response.json();
 		setToken(data.token);
 	};
 
 	const handleDoAction = async () => {
-		const response = await fetch("/api/doAction", {
+		const response = await fetch(PAGE_1 + "/api/doAction", {
 			headers: {
 				"Content-Type": "application/json",
 				"CSRF-Token": token,

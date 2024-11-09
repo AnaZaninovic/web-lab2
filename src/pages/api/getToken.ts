@@ -14,7 +14,7 @@ export default async function handler(
 
     if (!myCookie) {
         const token = randomUUID();
-        res.setHeader('Set-Cookie', `myCookie=${token}; HttpOnly; Secure; SameSite=Strict`);
+        res.setHeader('Set-Cookie', `myCookie=${token}; HttpOnly; Secure; SameSite=none`);
         res.status(200).json({token});
     } else {
         res.status(200).json({token: myCookie});

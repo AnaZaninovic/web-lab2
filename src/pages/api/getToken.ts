@@ -7,16 +7,11 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse
 ) {
-    if(req.method == "OPTIONS"){
-        res.setHeader('Access-Control-Allow-Origin', PAGE_1);
-        res.setHeader('Access-Control-Allow-Origin', PAGE_2);
-        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-        res.setHeader('Access-Control-Allow-Headers', 'Content-Type, CSRF-Token');
-        res.setHeader('Access-Control-Allow-Credentials', 'true');
+    res.setHeader('Access-Control-Allow-Origin', req.headers.origin || PAGE_1);
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, CSRF-Token');
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
 
-        res.status(200).end();
-        return 
-    }
 
     console.table(req.cookies);
 

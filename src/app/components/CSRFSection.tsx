@@ -19,8 +19,10 @@ export const CSRFSection = () => {
 		const response = await fetch(PAGE_1 + "/api/doAction", {
 			headers: {
 				"Content-Type": "application/json",
-				"CSRF-Token": token,
 			},
+            method: "GET",
+            mode: "cors",
+            credentials: "include",
 		});
 		const data = await response.json();
 		setActionResponse(data.action);

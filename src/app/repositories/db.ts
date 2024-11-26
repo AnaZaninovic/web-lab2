@@ -1,11 +1,11 @@
 import postgres, {PostgresType, Sql} from 'postgres'
 
 const db = postgres({
-    host: 'dpg-csf6iktsvqrc73fbqjrg-a.frankfurt-postgres.render.com',
+    host: 'dpg-ct30msrv2p9s73b44a6g-a.frankfurt-postgres.render.com',
     port: 5432,
-    database: 'web2lab2',
-    username: 'admin',
-    password: 'wYSPPXLyEwOgigHmYBaeDoeEKC5I72IA',
+    database: 'lab2_jclb',
+    username: 'lab2_jclb_user',
+    password: 'uAjfSoQtHN4JZCaO3cqVOc5dEpruB8zD',
     ssl: "allow"
 });
 
